@@ -79,9 +79,9 @@ prepare() {
   echo "-$pkgrel" > localversion.10-pkgrel
   echo "${pkgbase#linux}" > localversion.20-pkgname
 
-  _make defconfig
-  _make -s kernelrelease > version
-  _make mrproper
+  make ${_compiler_flags} defconfig
+  make ${_compiler_flags} -s kernelrelease > version
+  make ${_compiler_flags} mrproper
 
   local src
   for src in "${source[@]}"; do
