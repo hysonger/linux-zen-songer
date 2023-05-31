@@ -1,0 +1,10 @@
+linux-*.tar.xz
+*.pkg.tar.*
+*.patch.xz
+*.patch
+*.sig
+*.sign
+src/**
+pkg/**
+config.last
+config.old
